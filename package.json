@@ -7,9 +7,13 @@
     "start": "cd server && npm start",
     "dev": "cd server && npm run dev",
     "build": "cd server && npm install",
-    "install-server": "cd server && npm install"
+    "install": "cd server && npm install",
+    "postinstall": "cd server && npm install"
   },
-  "dependencies": {},
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "cors": "^2.8.5"
+  },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
