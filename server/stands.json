@@ -1,0 +1,101 @@
+{
+  "stands": [
+    {
+      "id": "develop1",
+      "name": "Develop1",
+      "description": "Основной тестовый стенд",
+      "nodes": [
+        "DemoMT5",
+        "MT5Indigosoft",
+        "Second",
+        "SuperNode"
+      ],
+      "tasks": [
+        "123"
+      ],
+      "taskData": {
+        "123": {
+          "tester": "Матвей"
+        }
+      },
+      "blocked": false,
+      "blockReason": "",
+      "blockDate": "",
+      "status": "busy"
+    },
+    {
+      "id": "develop2",
+      "name": "Develop2",
+      "description": "Стабилизационный стенд",
+      "nodes": [
+        "SuperNode"
+      ],
+      "tasks": [],
+      "taskData": {},
+      "blocked": false,
+      "blockReason": "",
+      "blockDate": "",
+      "status": "free"
+    },
+    {
+      "id": "develop3",
+      "name": "Develop3",
+      "description": "Производительность и нагрузка",
+      "nodes": [
+        "SuperNode"
+      ],
+      "tasks": [],
+      "taskData": {},
+      "blocked": true,
+      "blockReason": "Ведутся работы",
+      "blockDate": "2025-09-04T11:04:16.770Z",
+      "status": "blocked"
+    },
+    {
+      "id": "develop4",
+      "name": "Develop4",
+      "description": "Полный функционал",
+      "nodes": [
+        "CT_Indigosoft",
+        "CT_Test",
+        "MT4dev",
+        "MT5dev",
+        "MT5Indigosoft",
+        "SuperNode",
+        "HedgeNode"
+      ],
+      "tasks": [],
+      "taskData": {},
+      "blocked": false,
+      "blockReason": "",
+      "blockDate": "",
+      "status": "free"
+    }
+  ],
+  "completedTasks": [
+    {
+      "id": "21321",
+      "standId": "develop2",
+      "standName": "Develop2",
+      "completedDate": "2025-09-04T06:45:58.728Z"
+    },
+    {
+      "id": "12345",
+      "standId": "develop1",
+      "standName": "Develop1",
+      "completedDate": "2025-09-04T11:03:54.747Z"
+    },
+    {
+      "id": "312312",
+      "standId": "develop1",
+      "standName": "Develop1",
+      "completedDate": "2025-09-04T11:12:54.589Z"
+    },
+    {
+      "id": "13213",
+      "standId": "develop1",
+      "standName": "Develop1",
+      "completedDate": "2025-09-04T11:12:55.325Z"
+    }
+  ]
+}

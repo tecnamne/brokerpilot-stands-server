@@ -1,0 +1,22 @@
+{
+  "name": "brokerpilot-stands-server",
+  "version": "1.0.0",
+  "description": "BrokerPilot Stands Management Server for Railway",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "json-server stands.json --port 3001 --host 0.0.0.0",
+    "build": "npm install"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": ["brokerpilot", "stands", "management", "api"],
+  "author": "BrokerPilot Team",
+  "license": "MIT"
+}

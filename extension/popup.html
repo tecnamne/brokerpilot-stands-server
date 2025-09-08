@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>BrokerPilot Стенды</h2>
+            <div class="status-indicator" id="connectionStatus"></div>
+        </div>
+        
+        <div class="stand-selector">
+            <select id="standSelect">
+                <option value="">Выберите стенд...</option>
+            </select>
+        </div>
+        
+        <div id="standInfo" class="stand-info hidden">
+            <div class="stand-header">
+                <h3 id="standName"></h3>
+                <div class="stand-controls">
+                    <div class="task-count" id="taskCount">0 задач</div>
+                    <button id="blockBtn" class="btn-block">🔒 Заблокировать</button>
+                </div>
+            </div>
+            
+            <div class="stand-description">
+                <p id="standDescription"></p>
+            </div>
+            
+            <div id="blockInfo" class="block-info hidden">
+                <div class="block-warning">
+                    ⚠️ <strong>Стенд заблокирован</strong>
+                </div>
+                <div class="block-reason" id="blockReason"></div>
+                <div class="block-date" id="blockDate"></div>
+                <button id="unblockBtn" class="btn-unblock">🔓 Разблокировать</button>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">📦 Установленные ноды:</div>
+                <div class="nodes-container" id="standNodes"></div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">📋 Текущие задачи:</div>
+                <div class="tasks-container" id="currentTasks"></div>
+                
+                <div class="add-task-form" id="addTaskForm">
+                    <input type="text" id="taskInput" placeholder="Номер задачи (например: 1234)" maxlength="10">
+                    <button id="addTaskBtn" class="btn-add">Добавить</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно блокировки -->
+        <div id="blockModal" class="modal hidden">
+            <div class="modal-content">
+                <h3>🔒 Блокировка стенда</h3>
+                <p>Укажите причину блокировки стенда <strong id="modalStandName"></strong>:</p>
+                <form id="blockForm">
+                    <textarea id="blockReasonInput" placeholder="Причина блокировки (например: обновление системы, критическая ошибка...)" rows="3" required></textarea>
+                    <div class="modal-actions">
+                        <button type="submit" class="btn-danger">🔒 Заблокировать</button>
+                        <button type="button" id="cancelBlockBtn" class="btn-secondary">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Модальное окно переноса задачи -->
+        <div id="moveModal" class="modal hidden">
+            <div class="modal-content">
+                <h3>⟲ Перенос задачи</h3>
+                <p>Перенести задачу <strong id="moveTaskId"></strong> с стенда <strong id="moveFromStand"></strong> на:</p>
+                <form id="moveForm">
+                    <select id="moveToStandSelect" required>
+                        <option value="">Выберите стенд для переноса...</option>
+                    </select>
+                    <div class="modal-actions">
+                        <button type="submit" class="btn-primary">⟲ Перенести</button>
+                        <button type="button" id="cancelMoveBtn" class="btn-secondary">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <button id="refreshBtn" class="btn-refresh">🔄 Обновить</button>
+            <div class="status-message" id="statusMessage"></div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
